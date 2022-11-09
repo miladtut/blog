@@ -9,9 +9,11 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{route ('home')}}">Home</a>
                 </li>
+                @if(\Illuminate\Support\Facades\Route::has('posts'))
                 <li class="nav-item">
                     <a class="nav-link" href="{{route ('posts')}}">Posts</a>
                 </li>
+                @endif
             </ul>
             <a href="{{route ('logout')}}"> logout </a>
         </div>
